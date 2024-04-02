@@ -1,0 +1,23 @@
+.text-hover:hover {
+  color: $brown !important;
+}
+
+.img-hover:hover {
+  transition: transform 0.4s;
+  transform: translateY(-5px) scale(1.05);
+}
+
+.small-img-hover:hover {
+  transition: transform 0.4s;
+  transform: scale(1.1);
+}
+
+.button-hover:hover {
+  transition: background 0.2s;
+  background-color: $dark-brown !important;
+
+  &:active {
+    transition: background 0s;
+    background-color: $brown !important;
+  }
+}
