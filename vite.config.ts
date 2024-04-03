@@ -2,7 +2,7 @@ import { defineConfig } from "vite";
 import vue from "@vitejs/plugin-vue";
 import pxtovw from "postcss-px-to-viewport";
 import postCssConfig from "./postcss.config.js";
-
+import tailwindcss from "tailwindcss";
 // 按需导入element
 import AutoImport from "unplugin-auto-import/vite";
 import Components from "unplugin-vue-components/vite";
@@ -31,7 +31,7 @@ export default defineConfig({
 	},
 	css: {
 		postcss: {
-			plugins: [pxtovw(postCssConfig)],
+			plugins: [tailwindcss, pxtovw(postCssConfig)],
 		},
 		preprocessorOptions: {
 			scss: {
